@@ -1,14 +1,13 @@
-import React,{Fragment , Component} from 'react';
+import React,{Fragment} from 'react';
 import { connect } from "react-redux"
-class Router extends Component{
+import { Switch , BrowserRouter , Route , Link  } from "react-router-dom"
+ 
+class Router extends React.Component{
   constructor(props){
     super(props);
-    this.state = {
-
-    }
   }
-
   render(){
+    console.log(this)
     return (
       <Fragment>
 
@@ -29,4 +28,4 @@ const dispatchToProps=(dispatch)=>{
 }
 
 
-export default (StateToProps , dispatchToProps)(Router);
+export default (connect(StateToProps , dispatchToProps)(Router));

@@ -5,13 +5,16 @@ import * as serviceWorker from './serviceWorker';
 import store from "./store"
 import { Provider } from "react-redux"
 
-const App = (props) =>{
+const App = ()=>{
+
     return (
         <Provider store={store}>
-            
+            <Router></Router>
         </Provider>
     )
 }
+
+
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
